@@ -1,0 +1,28 @@
+﻿<Project>
+
+  <!-- Package and file versioning -->
+  <PropertyGroup>
+    <MajorVersion>1</MajorVersion>
+    <MinorVersion>0</MinorVersion>
+    <BuildVersion>0</BuildVersion>
+    <!-- RevisionVersion is used in a pre-release suffix, so use three digits -->
+    <RevisionVersion>000</RevisionVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyVersion>$(MajorVersion).$(MinorVersion).0</AssemblyVersion>
+    <InformationalVersion>$(MajorVersion).$(MinorVersion).$(BuildVersion).$(RevisionVersion)</InformationalVersion>
+    <FileVersion>$(MajorVersion).$(MinorVersion).$(BuildVersion).$(RevisionVersion)</FileVersion>
+    <PackageVersion>$(MajorVersion).$(MinorVersion).$(BuildVersion)</PackageVersion>
+
+    <Product>Steelcase.Application.Sample.WidgetManager</Product>
+    <Company>Steelcase</Company>
+    <Authors>Steelcase</Authors>
+    <Copyright>Copyright 2021 Steelcase, Inc. All rights reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <PackageVersion>$(MajorVersion).$(MinorVersion).$(BuildVersion)-dev$(RevisionVersion)</PackageVersion>
+  </PropertyGroup>
+  
+</Project>
